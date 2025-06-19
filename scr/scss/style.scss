@@ -1,0 +1,25 @@
+@import './header';
+@import './adatpiv';
+
+*body {
+    font-family: 'Montserrat';
+    background: -webkit-linear-gradient(270deg, rgb(255, 255, 255), rgb(135, 135, 135));
+    background: -moz-linear-gradient(270deg, rgb(255, 255, 255), rgb(135, 135, 135));
+    background: linear-gradient(270deg, rgb(255, 255, 255), rgb(135, 135, 135));
+}
+
+.container {
+    max-width: 1860px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
