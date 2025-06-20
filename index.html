@@ -12,12 +12,24 @@
 <body>
     <header class="header">
         <div class="container">
+
+            <!-- Для моб-го меню навигации -->
+            <input type="checkbox" id="nav-toggle" hidden>
+
+            <div class="header-mobile">
+
+                <div class="nav-toggle__border">
+                    <label for="nav-toggle" class="nav-toggle" onclick></label>
+                </div>
+
+                <button class="btn__menu-mobile">
+                    <div class="menu-mobile__icon">
+                        <img class="icon__img-mobile" src="./scr/img/phone-call.svg" alt="телефон">
+                    </div>
+                </button>
+            </div>
+
             <nav class="header__nav">
-                <!-- <button class="btn__open-menu-mobile">
-                    <span class="btn__menu-mobile__icon">
-                        <img src="" alt="">
-                    </span>
-                </button> -->
                 <ul class="nav__list">
                     <li class="list-item">
                         <a class="item-content">
@@ -39,20 +51,25 @@
                             Тендеры
                         </a>
                     </li>
+                    <li class="list-item vis">
+                        <a class="item-content">
+                            Вакансии
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
             <div class="header__btn-menu">
                 <button class="btn">
                     <span class="btn-text">Монтаж</span>
-                    <span class="btn__icon">
+                    <span class="btn__icon icon--anim">
                         <img class="btn__img" src="./scr/img/gechniy-key.svg" alt="иконка-гаечного-ключа">
                     </span>
                 </button>
 
                 <button class="btn">
                     <span class="btn-text">Магазин</span>
-                    <span class="btn__icon">
+                    <span class="btn__icon icon--anim">
                         <img class="btn__img" src="./scr/img/shop.svg" alt="иконка-магазина">
                     </span>
                 </button>
@@ -62,7 +79,7 @@
                         <span class="btn-text">
                             Связаться
                         </span>
-                        <span class="btn__icon black">
+                        <span class="btn__icon icon--anim black">
                             <img class="btn__img" src="./scr/img/menu.svg" alt="иконка">
                         </span>
                     </button>
@@ -73,8 +90,8 @@
                                 <span class="btn-text">
                                     Whatsapp
                                 </span>
-                                <span class="btn__icon">
-                                    <img class="btn__img" src="./scr/img/whatsapp.webp" alt="Ватсап">
+                                <span class="btn__icon icon--black-cyrcle">
+                                    <img class="btn__img img--white" src="./scr/img/whatsapp.webp" alt="Ватсап">
                                 </span>
                             </a>
                         </li>
@@ -83,8 +100,8 @@
                                 <span class="btn-text">
                                     Telegram
                                 </span>
-                                <span class="btn__icon">
-                                    <img class="btn__img" src="./scr/img/tg.webp" alt="Телеграмм">
+                                <span class="btn__icon icon--black-cyrcle">
+                                    <img class="btn__img img--white" src="./scr/img/tg.webp" alt="Телеграмм">
                                 </span>
                             </a>
                         </li>
@@ -93,8 +110,8 @@
                                 <span class="btn-text">
                                     E-mail
                                 </span>
-                                <span class="btn__icon">
-                                    <img class="btn__img" src="./scr/img/email.webp" alt="Почта">
+                                <span class="btn__icon icon--black-cyrcle">
+                                    <img class="btn__img img--white" src="./scr/img/email.webp" alt="Почта">
                                 </span>
                             </a>
                         </li>

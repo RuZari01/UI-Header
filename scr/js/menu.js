@@ -1,3 +1,4 @@
+//*выпадающее меню
 document.addEventListener('DOMContentLoaded', function () {
     const button = document.querySelector('.button');
     const menu = document.querySelector('.menu');
@@ -17,4 +18,31 @@ document.addEventListener('DOMContentLoaded', function () {
             menuLinks.forEach(link => link.setAttribute('tabindex', '-1'));
         }
     });
+});
+
+//*мобилка прокрутка
+button.addEventListener('click', () => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+
+    // Сначала обновляем состояние кнопки
+    button.setAttribute('aria-expanded', !expanded);
+    button.classList.toggle('active');
+
+    // Открываем/закрываем меню
+    if (!expanded) {
+        requestAnimationFrame(() => {
+            menu.style.maxHeight = menu.scrollHeight + "px";
+        });
+    } else {
+        menu.style.maxHeight = null;
+    }
+
+    // Прокрутка НЕ внутри условия открытия меню, а сразу после
+    if (isMobile && !expanded) {
+        window.scrollBy({
+            top: 200,
+            behavior: 'smooth'
+        });
+    }
 });
