@@ -432,6 +432,10 @@ label {
   }
   .header .container .header__nav .btn-menu .button {
     padding: 5px 55px;
+    pointer-events: auto;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   .header .container .header__nav .btn-menu .button .btn-text {
     font-weight: 500;
