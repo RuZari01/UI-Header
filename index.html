@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI-header-TZ</title>
+
+    <link rel="stylesheet" href="./scr/css/reset.css">
+    <link rel="stylesheet" href="./scr/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <!-- <input id="burger-toggle" type="checkbox"> -->
+                <div class="header__buttons" id="buttons-filter">
+                    <p class="mobile__icon btn--hover">
+                        <input id="burger-toggle" type="checkbox">
+                        <label class="burger-toggle__label" for="burger-toggle">
+                            <span class="burger-toggle__shape"></span>
+                        </label>
+                    </p>
+
+                    <button class="buttons__mobile btn--hover">
+                        <p class="mobile__icon">
+                            <img class="icon__img-mobile" src="./scr/img/phone-call.svg" alt="телефон">
+                        </p>
+                    </button>
+                </div>
+
+                <div class="nav__list" id="menu">
+                    <ul class="list__wrapper wrapper--list">
+                        <li class="list-item item--anim">
+                            <a class="item-content">
+                                Сертификаты
+                            </a>
+                        </li>
+                        <li class="list-item item--anim">
+                            <a class="item-content">
+                                Опыт
+                            </a>
+                        </li>
+                        <li class="list-item item--anim">
+                            <a class="item-content">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="list-item item--anim">
+                            <a class="item-content">
+                                Тендеры
+                            </a>
+                        </li>
+                        <li class="list-item item--anim item--vakansi">
+                            <a class="item-content">
+                                Вакансии
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="list__wrapper wrapper--btn">
+                        <li class="list-item">
+                            <button class="btn">
+                                <span class="btn-text">Монтаж</span>
+                                <span class="btn__icon icon--anim">
+                                    <img class="btn__img" src="./scr/img/gechniy-key.svg" alt="иконка-гаечного-ключа">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="list-item item-btn">
+                            <button class="btn">
+                                <span class="btn-text">Магазин</span>
+                                <span class="btn__icon icon--anim">
+                                    <img class="btn__img" src="./scr/img/shop.svg" alt="иконка-магазина">
+                                </span>
+                            </button>
+                        </li>
+                        <li class="list-item item-btn">
+                            <div class="btn-menu">
+                                <button class="button" aria-expanded="false" aria-controls="list">
+                                    <span class="btn-text">
+                                        Связаться
+                                    </span>
+                                    <span class="btn__icon icon--anim icon--black">
+                                        <img class="btn__img" src="./scr/img/menu.svg" alt="иконка">
+                                    </span>
+                                </button>
+
+                                <ul class="menu" id="list" role="menu" aria-hidden="true">
+                                    <li class="menu-item" role="none">
+                                        <a href="#" class="menu-link" role="menuitem" tabindex="-1">
+                                            <span class="btn-text">
+                                                Whatsapp
+                                            </span>
+                                            <span class="btn__icon icon--black-cyrcle">
+                                                <img class="btn__img img--white" src="./scr/img/whatsapp.webp"
+                                                    alt="Ватсап">
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item" role="none">
+                                        <a href="#" class="menu-link" role="menuitem" tabindex="-1">
+                                            <span class="btn-text">
+                                                Telegram
+                                            </span>
+                                            <span class="btn__icon icon--black-cyrcle">
+                                                <img class="btn__img img--white" src="./scr/img/tg.webp"
+                                                    alt="Телеграмм">
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item" role="none">
+                                        <a href="#" class="menu-link" role="menuitem" tabindex="-1">
+                                            <span class="btn-text">
+                                                E-mail
+                                            </span>
+                                            <span class="btn__icon icon--black-cyrcle">
+                                                <img class="btn__img img--white" src="./scr/img/email.webp" alt="Почта">
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script src="./scr/js/menu.js"></script>
+</body>
+
+</html>
