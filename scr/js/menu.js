@@ -1,4 +1,4 @@
-//*выпадающее меню
+//*выпадающее список кнопки
 document.addEventListener('DOMContentLoaded', function () {
     const button = document.querySelector('.button');
     const menu = document.querySelector('.menu');
@@ -20,29 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//*мобилка прокрутка
-button.addEventListener('click', () => {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    const expanded = button.getAttribute('aria-expanded') === 'true';
+//*
+const checkbox = document.getElementById("burger-toggle");
+const targetElement = document.getElementById("menu");
+const targetElement2 = document.getElementById("buttons-filter");
+const targetElement3 = document.body;
 
-    // Сначала обновляем состояние кнопки
-    button.setAttribute('aria-expanded', !expanded);
-    button.classList.toggle('active');
-
-    // Открываем/закрываем меню
-    if (!expanded) {
-        requestAnimationFrame(() => {
-            menu.style.maxHeight = menu.scrollHeight + "px";
-        });
+checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+        targetElement.classList.add("active");
+        targetElement2.classList.add("active");
+        targetElement3.classList.add("active");
     } else {
-        menu.style.maxHeight = null;
-    }
-
-    // Прокрутка НЕ внутри условия открытия меню, а сразу после
-    if (isMobile && !expanded) {
-        window.scrollBy({
-            top: 200,
-            behavior: 'smooth'
-        });
+        targetElement.classList.remove("active");
+        targetElement2.classList.remove("active");
+        targetElement3.classList.remove("active");
     }
 });
