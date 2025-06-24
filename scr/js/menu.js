@@ -4,8 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.menu');
     const menuLinks = document.querySelectorAll('.menu-link');
 
-    button.addEventListener('click', (e) => {
+    button.addEventListener('click', function (e) {
         const isActive = button.classList.contains('active');
+
+        //? Переключаем класс active
         button.classList.toggle('active');
 
         if (!isActive) {
@@ -18,7 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
             menuLinks.forEach(link => link.setAttribute('tabindex', '-1'));
         }
     });
+
+    //? Закрытие меню при клике вне его области
+    document.addEventListener('click', function (e) {
+        if (!button.contains(e.target) && !menu.contains(e.target)) {
+            button.classList.remove('active');
+            button.setAttribute('aria-expanded', 'false');
+            menu.setAttribute('aria-hidden', 'true');
+            menuLinks.forEach(link => link.setAttribute('tabindex', '-1'));
+        }
+    });
 });
+
 
 //*
 const checkbox = document.getElementById("burger-toggle");
